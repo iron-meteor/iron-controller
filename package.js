@@ -1,0 +1,25 @@
+Package.describe({
+  summary: 'Controller class for dynamic templates.'
+});
+
+Package.on_use(function (api) {
+  // dependencies
+  api.use('underscore');
+  api.use('reactive-dict');
+  api.use('iron-layout');
+  api.use('iron-dynamic-template');
+
+  api.add_files('lib/wait_list.js', 'client');
+  api.add_files('lib/controller.js');
+
+  // symbol exports
+  api.export('Iron');
+});
+
+Package.on_test(function (api) {
+  api.use('iron-controller');
+  api.use('tinytest');
+  api.use('test-helpers');
+
+  api.add_files('test/controller_client_test.js', 'client');
+});

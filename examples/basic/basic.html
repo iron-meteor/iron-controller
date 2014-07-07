@@ -1,0 +1,24 @@
+<head>
+  <title>basic</title>
+</head>
+
+<body>
+</body>
+
+<template name="MasterLayout">
+  <h1>Master Layout</h1>
+
+  {{> yield}}
+
+  <footer>
+    {{> yield "footer"}}
+  </footer>
+</template>
+
+<template name="PageOne">
+  <h2>Page One: {{title}}</h2>
+</template>
+
+<template name="PageTwo">
+  <h2>Page Two: {{title}}</h2>
+</template>
