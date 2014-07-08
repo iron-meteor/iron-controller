@@ -1,5 +1,7 @@
 Package.describe({
-  summary: 'Controller class for dynamic templates.'
+  summary: 'Controller class for dynamic layouts.',
+  version: '0.1.0',
+  githubUrl: 'https://github.com/eventedmind/iron-controller'
 });
 
 Package.on_use(function (api) {
