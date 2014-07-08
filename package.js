@@ -17,11 +17,12 @@ Package.on_use(function (api) {
   // reactive state variables
   api.use('reactive-dict');
 
+  api.use('iron-utils');
   api.use('iron-layout');
   api.use('iron-dynamic-template');
 
   api.add_files('lib/wait_list.js', 'client');
-  api.add_files('lib/controller.js');
+  api.add_files('lib/controller.js', ['client', 'server']);
 
   // symbol exports
   api.export('Iron');
