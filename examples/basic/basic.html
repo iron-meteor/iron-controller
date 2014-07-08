@@ -19,10 +19,17 @@
   <h2>Page One: {{title}}</h2>
 
   <p>
-    Hello, {{greeting}}
+    Hello, {{greeting}} (from a Controller reactive variable)
   </p>
+
 </template>
 
-<template name="PageTwo">
-  <h2>Page Two: {{title}}</h2>
+<template name="Footer">
+  Footer content goes here.
+</template>
+
+<template name="Loading">
+  <p>
+    Loading (Session.set('sub1', true) to finish loading)...
+  </p>
 </template>
