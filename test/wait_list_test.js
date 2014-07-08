@@ -15,7 +15,7 @@ ReadyHandle.prototype.ready = function () {
   return this._ready;
 };
 
-Tinytest.add('WaitList', function (test) {
+Tinytest.add('WaitList - all', function (test) {
   list = new Iron.WaitList;
 
   var h1 = new ReadyHandle;

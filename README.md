@@ -1,8 +1,14 @@
 Iron.Controller
 ====================================
 
-Controller wrapper around an Iron.DynamicLayout which can store state and is
-accessible from template helpers.
+A controller class for dynamic layouts with the following key features:
+
+* Inheritance
+* Reactive state variables
+* Wrapper around layout methods
+* Insert directly into the dom
+* Rendering transactions
+* Waitlist and reactive ready() method 
 
 ## Example
 
