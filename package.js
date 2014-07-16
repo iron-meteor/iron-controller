@@ -14,6 +14,9 @@ Package.on_use(function (api) {
   // for the UI namespace
   api.use('ui');
 
+  // reactivity
+  api.use('deps');
+
   // reactive state variables
   api.use('reactive-dict');
 
