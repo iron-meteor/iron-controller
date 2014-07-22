@@ -1,7 +1,7 @@
 Package.describe({
   summary: 'Controller class for dynamic layouts.',
   version: '0.1.0',
-  githubUrl: 'https://github.com/eventedmind/iron-controller'
+  git: 'https://github.com/eventedmind/iron-controller.git'
 });
 
 Package.on_use(function (api) {
@@ -24,6 +24,7 @@ Package.on_use(function (api) {
   api.imply('iron:core');
 
   api.use('iron:layout');
+  api.use('iron:dynamic-template');
 
   api.addFiles('lib/wait_list.js', 'client');
   api.addFiles('lib/controller.js', ['client', 'server']);
@@ -35,6 +36,6 @@ Package.on_test(function (api) {
   api.use('test-helpers');
   api.use('deps');
 
-  api.add_files('test/wait_list_test.js', 'client');
-  api.add_files('test/controller_test.js', 'client');
+  api.addFiles('test/wait_list_test.js', 'client');
+  api.addFiles('test/controller_test.js', 'client');
 });
