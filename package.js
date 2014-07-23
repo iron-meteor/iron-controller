@@ -32,10 +32,13 @@ Package.on_use(function (api) {
 
 Package.on_test(function (api) {
   api.use('iron:controller');
+  api.use('iron:layout');
   api.use('tinytest');
   api.use('test-helpers');
   api.use('deps');
+  api.use('templating');
 
+  api.addFiles('test/controller_test.html', 'client');
   api.addFiles('test/wait_list_test.js', 'client');
   api.addFiles('test/controller_test.js', 'client');
 });
