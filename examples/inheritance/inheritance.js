@@ -13,11 +13,11 @@ if (Meteor.isClient) {
 
   Template.Page.helpers({
     parentGreeting: function () {
-      return UI.controller().parentGreeting();
+      return Iron.controller().parentGreeting();
     },
 
     childGreeting: function () {
-      return UI.controller().childGreeting();
+      return Iron.controller().childGreeting();
     }
   });
 

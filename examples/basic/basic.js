@@ -3,7 +3,7 @@ if (Meteor.isClient) {
     greeting: function () {
       // access the controller on this template or the closest parent ancestor
       // component
-      var controller = UI.controller();
+      var controller = Iron.controller();
 
       // access controller reactive state variables
       return controller.get('greeting');

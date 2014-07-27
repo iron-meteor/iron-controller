@@ -87,7 +87,7 @@ Tinytest.add('Controller - inheritance', function (test) {
 
 Template.ControllerTest.helpers({
   id: function () {
-    var c = UI.controller();
+    var c = Iron.controller();
     return c && c.options.id;
   }
 });
@@ -112,7 +112,7 @@ Tinytest.add('Controller - changing layout controllers', function (test) {
 
 Template.ReactiveStateTest.helpers({
   postId: function () {
-    var c = UI.controller();
+    var c = Iron.controller();
     return c && c.get('postId');
   }
 });
