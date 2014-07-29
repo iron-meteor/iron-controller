@@ -27,7 +27,10 @@ Package.on_use(function (api) {
   api.use('iron-dynamic-template');
 
   api.add_files('lib/wait_list.js', 'client');
-  api.add_files('lib/controller.js', ['client', 'server']);
+  api.add_files('lib/controller.js');
+
+  api.add_files('lib/controller_server.js', 'server');
+  api.add_files('lib/controller_client.js', 'client');
 });
 
 Package.on_test(function (api) {
