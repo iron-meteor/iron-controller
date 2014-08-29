@@ -1,30 +1,24 @@
 Package.describe({
   summary: 'Controller class for dynamic layouts.',
-  version: '0.2.0',
+  version: '0.4.0-rc0',
   git: 'https://github.com/eventedmind/iron-controller.git'
 });
 
 Package.on_use(function (api) {
   // dependencies
-  api.use('underscore');
-
-  // for helpers like Meteor._inherit
-  api.use('meteor');
-
-  // for the UI namespace
-  api.use('ui');
+  api.use('underscore@1.0.0');
 
   // reactivity
-  api.use('deps');
+  api.use('tracker@1.0.2-rc1');
 
   // reactive state variables
-  api.use('reactive-dict');
+  api.use('reactive-dict@1.0.0');
 
   api.use('iron:core@0.3.2');
   api.imply('iron:core');
 
-  api.use('iron:layout@0.3.0');
-  api.use('iron:dynamic-template@0.3.0');
+  api.use('iron:layout@0.4.0-rc0');
+  api.use('iron:dynamic-template@0.4.0-rc0');
 
   api.add_files('lib/wait_list.js', 'client');
   api.add_files('lib/controller.js');
@@ -38,7 +32,7 @@ Package.on_test(function (api) {
   api.use('iron:layout');
   api.use('tinytest');
   api.use('test-helpers');
-  api.use('deps');
+  api.use('tracker');
   api.use('templating');
 
   api.add_files('test/controller_test.html', 'client');
