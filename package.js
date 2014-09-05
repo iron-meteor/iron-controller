@@ -18,8 +18,8 @@ Package.on_use(function (api) {
   api.use('iron:core@1.0.0');
   api.imply('iron:core');
 
-  api.use('iron:layout@1.0.0', 'client');
-  api.use('iron:dynamic-template@1.0.0', 'client');
+  api.use('iron:layout@1.0.0');
+  api.use('iron:dynamic-template@1.0.0');
 
   api.add_files('lib/wait_list.js', 'client');
   api.add_files('lib/controller.js');

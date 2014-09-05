@@ -148,7 +148,6 @@ var lastEvent = null;
 Template.ControllerEventHandler.events({
   'click': function () {
     var c = Iron.controller();
-    console.log(c);
     lastEvent = {id: c && c.options.id};
   }
 });
