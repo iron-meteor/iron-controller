@@ -169,7 +169,7 @@ Tinytest.add('Controller - Iron.controller() lookup in event handlers', function
 Template.ReactiveStateTest.helpers({
   postId: function () {
     var c = Iron.controller();
-    return c && c.get('postId');
+    return c && c.state.get('postId');
   }
 });
 
@@ -181,12 +181,12 @@ Tinytest.add('Controller - reactive state variables', function (test) {
     test.equal(el.innerHTML.compact(), "");
 
     var c = new Iron.Controller({layout: layout});
-    c.set('postId', 1);
+    c.state.set('postId', 1);
     Deps.flush();
     test.equal(el.innerHTML.compact(), "1");
 
     var c = new Iron.Controller({layout: layout});
-    c.set('postId', 2);
+    c.state.set('postId', 2);
     Deps.flush();
     test.equal(el.innerHTML.compact(), "2");
   });

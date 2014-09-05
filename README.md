@@ -14,7 +14,7 @@ if (Meteor.isClient) {
       var controller = Iron.controller();
 
       // access controller reactive state variables
-      return controller.get('greeting');
+      return controller.state.get('greeting');
     }
   });
 
@@ -51,7 +51,7 @@ if (Meteor.isClient) {
     controller.render('Footer', {to: 'footer'});
 
     // set the greeting reactive state variable
-    controller.set('greeting', 'EventedMind');
+    controller.state.set('greeting', 'EventedMind');
   });
 }
 ```
