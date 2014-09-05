@@ -43,8 +43,7 @@ var withDiv = function (callback) {
 var withRenderedTemplate = function (template, callback) {
   withDiv(function (el) {
     template = _.isString(template) ? Template[template] : template;
-    var range = Blaze.render(template);
-    range.attach(el);
+    Blaze.render(template, el);
     Deps.flush();
     callback(el);
   });
@@ -85,20 +84,22 @@ Tinytest.add('Controller - inheritance', function (test) {
   test.equal(calls.length, 1);
 });
 
-Template.ControllerTest.helpers({
+Template.ControllerChangeTest.helpers({
   id: function () {
     var c = Iron.controller();
     return c && c.options.id;
   }
 });
 
-Tinytest.add('Controller - changing layout controllers', function (test) {
+Tinytest.add('Controller - change layout controllers', function (test) {
   var layout = new Iron.Layout;
   withRenderedTemplate(layout.create(), function (el) {
-    layout.render('ControllerTest');
+    // start off with no controller
+    layout.render('ControllerChangeTest');
     Deps.flush();
     test.equal(el.innerHTML.compact(), "Controller-");
 
+    // change the controller on the layout
     var c1 = new Iron.Controller({layout: layout, id: 1});
     Deps.flush();
     test.equal(el.innerHTML.compact(), "Controller-1");
@@ -107,6 +108,62 @@ Tinytest.add('Controller - changing layout controllers', function (test) {
     var c2 = new Iron.Controller({layout: layout, id: 2});
     Deps.flush();
     test.equal(el.innerHTML.compact(), "Controller-2");
+  });
+});
+
+Template.ControllerTest.helpers({
+  id: function () {
+    var c = Iron.controller();
+    return c && c.options.id;
+  }
+});
+
+Template.ControllerChild.helpers({
+  id: function () {
+    var c = Iron.controller();
+    return c && c.options.id;
+  }
+});
+
+Tinytest.add('Controller - Iron.controller() lookup in helpers', function (test) {
+  var layout = new Iron.Layout;
+  withRenderedTemplate(layout.create(), function (el) {
+    // start off with no controller
+    layout.render('ControllerTest');
+    Deps.flush();
+    test.equal(el.innerHTML.compact(), "Parent-Child-");
+
+    // set the controller on the layout
+    var c1 = new Iron.Controller({layout: layout, id: 1});
+    Deps.flush();
+
+    // Iron.controller() should work for child templates and parent
+    // templates
+    test.equal(el.innerHTML.compact(), "Parent-1Child-1");
+  });
+});
+
+var lastEvent = null;
+
+Template.ControllerEventHandler.events({
+  'click': function () {
+    var c = Iron.controller();
+    console.log(c);
+    lastEvent = {id: c && c.options.id};
+  }
+});
+
+Tinytest.add('Controller - Iron.controller() lookup in event handlers', function (test) {
+  var layout = new Iron.Layout({template: 'ControllerEventHandler'});
+  withRenderedTemplate(layout.create(), function (el) {
+    test.equal(el.innerHTML.compact(), "<div>TriggerClick</div>");
+
+    var c1 = new Iron.Controller({layout: layout, id: 1});
+    Deps.flush();
+
+    $(el).find('div').trigger('click');
+    test.isTrue(lastEvent, 'last event is set');
+    test.equal(lastEvent.id, 1);
   });
 });
 

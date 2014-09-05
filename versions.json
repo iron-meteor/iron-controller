@@ -2,7 +2,7 @@
   "dependencies": [
     [
       "blaze",
-      "2.0.0-rc0"
+      "2.0.0-rc1"
     ],
     [
       "deps",
@@ -18,7 +18,7 @@
     ],
     [
       "htmljs",
-      "1.0.0"
+      "1.0.0-cordova1"
     ],
     [
       "id-map",
@@ -26,15 +26,15 @@
     ],
     [
       "iron:core",
-      "0.3.2"
+      "1.0.0"
     ],
     [
       "iron:dynamic-template",
-      "0.4.0-rc0"
+      "1.0.0"
     ],
     [
       "iron:layout",
-      "0.4.0-rc0"
+      "1.0.0"
     ],
     [
       "jquery",
@@ -46,11 +46,11 @@
     ],
     [
       "meteor",
-      "1.0.3-rc0"
+      "1.1.0-rc0"
     ],
     [
       "minimongo",
-      "1.0.2-rc0"
+      "1.0.2-rc2"
     ],
     [
       "observe-sequence",
@@ -66,7 +66,7 @@
     ],
     [
       "reactive-dict",
-      "1.0.1-rc0"
+      "1.0.1-rc1"
     ],
     [
       "reactive-var",
@@ -74,11 +74,15 @@
     ],
     [
       "templating",
-      "1.0.5-rc0"
+      "1.0.6-rc0"
     ],
     [
       "tracker",
       "1.0.2-rc1"
+    ],
+    [
+      "ui",
+      "1.0.1-rc0"
     ],
     [
       "underscore",
@@ -86,6 +90,6 @@
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.27-rc2",
+  "toolVersion": "meteor-tool@CHECKOUT",
   "format": "1.0"
 }

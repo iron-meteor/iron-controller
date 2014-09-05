@@ -1,7 +1,22 @@
-<template name="ControllerTest">
-Controller-{{id}}
+<template name="ControllerChangeTest">
+  Controller-{{id}}
 </template>
 
 <template name="ReactiveStateTest">
-{{postId}}
+  {{postId}}
+</template>
+
+<template name="ControllerTest">
+  Parent-{{id}}
+  {{> ControllerChild}}
+</template>
+
+<template name="ControllerChild">
+  Child-{{id}}
+</template>
+
+<template name="ControllerEventHandler">
+  <div>
+    TriggerClick
+  </div>
 </template>
