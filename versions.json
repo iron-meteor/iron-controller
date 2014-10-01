@@ -2,15 +2,19 @@
   "dependencies": [
     [
       "base64",
-      "1.0.0-rc0"
+      "1.0.0"
     ],
     [
       "blaze",
-      "2.0.0"
+      "2.0.1"
+    ],
+    [
+      "deps",
+      "1.0.4"
     ],
     [
       "ejson",
-      "1.0.2"
+      "1.0.3"
     ],
     [
       "geojson-utils",
@@ -18,7 +22,7 @@
     ],
     [
       "htmljs",
-      "1.0.0"
+      "1.0.1"
     ],
     [
       "id-map",
@@ -26,15 +30,15 @@
     ],
     [
       "iron:core",
-      "1.0.0-pre2"
+      "1.0.0-pre3"
     ],
     [
       "iron:dynamic-template",
-      "1.0.0-pre2"
+      "1.0.0-pre3"
     ],
     [
       "iron:layout",
-      "1.0.0-pre2"
+      "1.0.0-pre3"
     ],
     [
       "jquery",
@@ -46,15 +50,15 @@
     ],
     [
       "meteor",
-      "1.1.0"
+      "1.1.1"
     ],
     [
       "minimongo",
-      "1.0.2-glasser1"
+      "1.0.3"
     ],
     [
       "observe-sequence",
-      "1.0.2-rc0"
+      "1.0.2"
     ],
     [
       "ordered-dict",
@@ -66,15 +70,15 @@
     ],
     [
       "reactive-dict",
-      "1.0.2"
+      "1.0.3"
     ],
     [
       "reactive-var",
-      "1.0.1"
+      "1.0.2"
     ],
     [
       "templating",
-      "1.0.6"
+      "1.0.7"
     ],
     [
       "tracker",
@@ -82,7 +86,7 @@
     ],
     [
       "ui",
-      "1.0.2"
+      "1.0.3"
     ],
     [
       "underscore",
@@ -90,6 +94,6 @@
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.30",
+  "toolVersion": "meteor-tool@1.0.33",
   "format": "1.0"
 }

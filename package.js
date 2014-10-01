@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Controller class for dynamic layouts.',
-  version: '1.0.0-pre2',
+  version: '1.0.0-pre3',
   git: 'https://github.com/eventedmind/iron-controller.git'
 });
 
@@ -15,11 +15,11 @@ Package.on_use(function (api) {
   // reactive state variables
   api.use('reactive-dict');
 
-  api.use('iron:core@1.0.0-pre2');
+  api.use('iron:core@1.0.0-pre3');
   api.imply('iron:core');
 
-  api.use('iron:layout@1.0.0-pre2');
-  api.use('iron:dynamic-template@1.0.0-pre2');
+  api.use('iron:layout@1.0.0-pre3');
+  api.use('iron:dynamic-template@1.0.0-pre3');
 
   api.add_files('lib/wait_list.js', 'client');
   api.add_files('lib/controller.js');
