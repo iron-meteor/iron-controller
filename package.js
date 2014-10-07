@@ -15,6 +15,8 @@ Package.on_use(function (api) {
   // reactive state variables
   api.use('reactive-dict');
 
+  api.use('templating');
+
   api.use('iron:core@1.0.0-pre3');
   api.imply('iron:core');
 
