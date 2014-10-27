@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Controller class for dynamic layouts.',
-  version: '1.0.0-pre5',
+  version: '1.0.0-rc.1',
   git: 'https://github.com/eventedmind/iron-controller.git'
 });
 
@@ -17,11 +17,11 @@ Package.on_use(function (api) {
 
   api.use('templating');
 
-  api.use('iron:core@1.0.0-pre5');
+  api.use('iron:core@1.0.0-rc.1');
   api.imply('iron:core');
 
-  api.use('iron:layout@1.0.0-pre5');
-  api.use('iron:dynamic-template@1.0.0-pre5');
+  api.use('iron:layout@1.0.0-rc.1');
+  api.use('iron:dynamic-template@1.0.0-rc.1');
 
   api.add_files('lib/wait_list.js', 'client');
   api.add_files('lib/controller.js');
