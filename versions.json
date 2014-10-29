@@ -30,15 +30,15 @@
     ],
     [
       "iron:core",
-      "1.0.0-pre5"
+      "1.0.0"
     ],
     [
       "iron:dynamic-template",
-      "1.0.0-pre5"
+      "1.0.0"
     ],
     [
       "iron:layout",
-      "1.0.0-pre5"
+      "1.0.0"
     ],
     [
       "jquery",
