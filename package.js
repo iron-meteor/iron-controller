@@ -1,7 +1,8 @@
 Package.describe({
   summary: 'Controller class for dynamic layouts.',
   version: '1.0.8',
-  git: 'https://github.com/eventedmind/iron-controller.git'
+  git: 'https://github.com/eventedmind/iron-controller.git',
+  name: 'iron:controller'
 });
 
 Package.on_use(function (api) {
