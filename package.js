@@ -21,7 +21,7 @@ Package.on_use(function (api) {
   api.use('iron:core@1.0.8');
   api.imply('iron:core');
 
-  api.use('iron:layout@1.0.8');
+  api.use('iron:layout@1.0.10');
   api.use('iron:dynamic-template@1.0.8');
 
   api.add_files('lib/wait_list.js', 'client');
