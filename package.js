@@ -1,7 +1,7 @@
 Package.describe({
   name: 'iron:controller',
   summary: 'Controller class for dynamic layouts.',
-  version: '1.0.11',
+  version: '1.0.12',
   git: 'https://github.com/iron-meteor/iron-controller'
 });
 
@@ -16,8 +16,8 @@ Package.on_use(function (api) {
   api.use('iron:core@1.0.11');
   api.imply('iron:core');
 
-  api.use('iron:layout@1.0.11');
-  api.use('iron:dynamic-template@1.0.11');
+  api.use('iron:layout@1.0.12');
+  api.use('iron:dynamic-template@1.0.12');
 
   api.add_files('lib/wait_list.js', 'client');
   api.add_files('lib/controller.js');
